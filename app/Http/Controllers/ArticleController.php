@@ -300,7 +300,7 @@ class ArticleController extends Controller
             $hasUnreadNotifications = $newArticles->count() > 0;
         }
 
-        return view('welcome', compact('articles', 'categories', 'newArticles', 'hasUnreadNotifications', 'featuredArticle'));
+        return view('app', compact('articles', 'categories', 'newArticles', 'hasUnreadNotifications', 'featuredArticle'));
     }
 
     // Fungsi untuk menandai notifikasi sudah dibaca
