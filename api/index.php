@@ -4,6 +4,9 @@
 $_ENV['APP_STORAGE'] = '/tmp/storage';
 putenv('APP_STORAGE=/tmp/storage');
 
+$_ENV['LOG_CHANNEL'] = 'stderr';
+putenv('LOG_CHANNEL=stderr');
+
 // Buat struktur folder di dalam /tmp jika belum ada
 $storageDirs = [
     '/tmp/storage',
