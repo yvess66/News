@@ -7,8 +7,13 @@ putenv('APP_STORAGE=/tmp/storage');
 $_ENV['LOG_CHANNEL'] = 'stderr';
 putenv('LOG_CHANNEL=stderr');
 
+$_ENV['APP_BOOTSTRAP'] = '/tmp/bootstrap';
+putenv('APP_BOOTSTRAP=/tmp/bootstrap');
+
 // Buat struktur folder di dalam /tmp jika belum ada
 $storageDirs = [
+    '/tmp/bootstrap',
+    '/tmp/bootstrap/cache',
     '/tmp/storage',
     '/tmp/storage/app',
     '/tmp/storage/framework',
