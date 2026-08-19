@@ -1,0 +1,202 @@
+/* Social Media Share Styles */
+.share-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 280px;
+    overflow: hidden;
+}
+
+.share-dropdown.hidden {
+    display: none;
+}
+
+.share-header {
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.share-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.social-buttons {
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    width: 100%;
+    background: #f7fafc;
+    color: #2d3748;
+}
+
+.social-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Facebook */
+.social-btn.facebook {
+    background: linear-gradient(135deg, #1877f2, #165ed0);
+    color: white;
+}
+
+.social-btn.facebook:hover {
+    background: linear-gradient(135deg, #165ed0, #1348a0);
+}
+
+/* X (formerly Twitter) */
+.social-btn.x-twitter {
+    background: linear-gradient(135deg, #000000, #333333);
+    color: white;
+}
+
+.social-btn.x-twitter:hover {
+    background: linear-gradient(135deg, #333333, #555555);
+}
+
+/* WhatsApp */
+.social-btn.whatsapp {
+    background: linear-gradient(135deg, #25d366, #1ebe57);
+    color: white;
+}
+
+.social-btn.whatsapp:hover {
+    background: linear-gradient(135deg, #1ebe57, #17a347);
+}
+
+/* LinkedIn */
+.social-btn.linkedin {
+    background: linear-gradient(135deg, #0077b5, #005885);
+    color: white;
+}
+
+.social-btn.linkedin:hover {
+    background: linear-gradient(135deg, #005885, #004766);
+}
+
+/* Telegram */
+.social-btn.telegram {
+    background: linear-gradient(135deg, #0088cc, #006ca3);
+    color: white;
+}
+
+.social-btn.telegram:hover {
+    background: linear-gradient(135deg, #006ca3, #005380);
+}
+
+/* Copy Link */
+.social-btn.copy-link {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.social-btn.copy-link:hover {
+    background: linear-gradient(135deg, #764ba2, #5a4b8c);
+}
+
+/* Action buttons positioning */
+.article-actions {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.action-button.primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.action-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.action-button.secondary {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}
+
+.action-button.secondary:hover {
+    background: #edf2f7;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .share-dropdown {
+        right: -20px;
+        left: -20px;
+        min-width: auto;
+    }
+    
+    .article-actions {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .article-actions > div {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+}
+
+/* Notification styles */
+.notification {
+    animation: slideInFromRight 0.3s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

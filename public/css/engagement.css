@@ -1,0 +1,207 @@
+/* Article Engagement Styles */
+.article-engagement-section {
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.engagement-stats {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.stats-summary {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.likes-count, .dislikes-count, .shares-count {
+    color: #374151;
+    font-weight: 600;
+}
+
+.engagement-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.engagement-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.engagement-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Like Button */
+.like-btn {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.like-btn:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.like-btn.active {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.like-btn.active .like-icon {
+    animation: likeAnimation 0.3s ease;
+}
+
+/* Dislike Button */
+.dislike-btn {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.dislike-btn:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+.dislike-btn.active {
+    background-color: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+.dislike-btn.active .dislike-icon {
+    animation: dislikeAnimation 0.3s ease;
+}
+
+/* Share Button */
+.share-btn {
+    border-color: #10b981;
+    color: #10b981;
+}
+
+.share-btn:hover {
+    background-color: #10b981;
+    color: white;
+}
+
+.share-btn.active {
+    background-color: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+/* Count badges */
+.engagement-btn .count {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: inherit;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
+}
+
+.engagement-btn.active .count {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* Animations */
+@keyframes likeAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes dislikeAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shareAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.share-btn.clicked .share-icon {
+    animation: shareAnimation 0.3s ease;
+}
+
+/* Loading state */
+.engagement-btn.loading {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+    .engagement-actions {
+        gap: 0.5rem;
+    }
+    
+    .engagement-btn {
+        padding: 0.6rem 1rem;
+        font-size: 13px;
+        min-width: 80px;
+    }
+    
+    .engagement-btn .btn-text {
+        display: none;
+    }
+    
+    .stats-summary {
+        font-size: 13px;
+    }
+}
+
+/* Toast notification for actions */
+.engagement-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1f2937;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.engagement-toast.show {
+    transform: translateX(0);
+}
+
+.engagement-toast.success {
+    background-color: #10b981;
+}
+
+.engagement-toast.error {
+    background-color: #ef4444;
+}

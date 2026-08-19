@@ -1,0 +1,70 @@
+/* Custom CKEditor Overrides */
+
+/* Target the CKEditor content area specifically */
+.ck.ck-content {
+    background-color: var(--input-bg) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Ensure the background stays consistent when focusing and typing */
+.ck.ck-editor__main > .ck-editor__editable {
+    background-color: var(--input-bg) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Override any internal CKEditor focusing behavior */
+.ck.ck-editor__editable_inline {
+    background-color: var(--input-bg) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Override the CKEditor blinking cursor color to match our theme */
+.ck.ck-editor__editable_inline > * {
+    caret-color: var(--primary-color) !important;
+}
+
+/* Override any internal CKEditor focusing behavior */
+.ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+    background-color: var(--input-bg) !important;
+    color: var(--text-dark) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Style dropdown panels */
+.ck.ck-dropdown__panel {
+    background-color: var(--white) !important;
+    border-color: var(--border-light) !important;
+}
+
+/* Style dropdown items */
+.ck.ck-dropdown__panel .ck-list__item {
+    color: var(--text-dark) !important;
+}
+
+.ck.ck-dropdown__panel .ck-list__item:hover {
+    background-color: var(--hover-color) !important;
+}
+
+/* Style the toolbar dropdown buttons */
+.ck.ck-toolbar .ck-dropdown .ck-button.ck-dropdown__button {
+    color: var(--text-dark) !important;
+}
+
+.ck.ck-toolbar .ck-dropdown .ck-button.ck-dropdown__button:hover {
+    background: var(--hover-color) !important;
+}
+
+/* Style the toolbar separator */
+.ck.ck-toolbar .ck.ck-toolbar__separator {
+    background-color: var(--border-light) !important;
+}
+
+/* Make sure editor dropdown buttons use the right color */
+.ck.ck-dropdown .ck-dropdown__button:not(.ck-on) .ck-dropdown__arrow {
+    color: var(--text-dark) !important;
+}
+
+/* Style the focused dropdown button */
+.ck.ck-dropdown .ck-dropdown__button.ck-on {
+    background-color: var(--hover-color) !important;
+}

@@ -1,0 +1,1001 @@
+/**
+ * Show.css - Styling untuk halaman detail artikel show.blade.php
+ * Dibuat untuk memisahkan CSS dari file blade
+ * Untuk memudahkan pemeliharaan kode
+ */
+
+/*--------------------------------------*\
+  ARTICLE IMAGE STYLING
+\*--------------------------------------*/
+.article-image-featured {
+    max-height: 500px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    aspect-ratio: 16 / 9;
+}
+
+.image-standardized {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+    max-height: 500px;
+}
+
+/*--------------------------------------*\
+  ARTICLE CONTENT STYLING
+\*--------------------------------------*/
+.article-content {
+    line-height: 1.7;
+    color: #333;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    display: block;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    max-height: 500px;
+}
+
+.article-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.article-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.article-content ul, 
+.article-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+}
+
+.article-content blockquote {
+    border-left: 3px solid #3b82f6;
+    padding: 0.75rem 1rem;
+    background-color: #f3f4f6;
+    margin: 1.5rem 0;
+}
+
+.article-content a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/*--------------------------------------*\
+  NEWSPAPER LAYOUT STYLES
+\*--------------------------------------*/
+/* Newspaper Layout Styles */
+.newspaper-layout {
+    margin-bottom: 2rem;
+}
+    
+/* Newspaper Masthead */
+.newspaper-masthead {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #222;
+}
+    
+.newspaper-date {
+    font-size: 0.9rem;
+    color: #555;
+    font-family: 'Times New Roman', serif;
+}
+    
+.newspaper-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    color: #111;
+}
+    
+.newspaper-tagline {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    font-family: 'Times New Roman', serif;
+}
+    
+/* Grid Layout for Newspaper */
+.newspaper-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 25px;
+    margin-bottom: 2rem;
+}
+    
+/* Main Content Area */
+.newspaper-main-content {
+    font-family: 'Times New Roman', serif;
+    max-width: 100%;
+}
+    
+.newspaper-headline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    font-family: 'Times New Roman', serif;
+    color: #111;
+}
+    
+.newspaper-article-byline {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+    
+.newspaper-author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+    
+.newspaper-author-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+    
+.newspaper-publish-date {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.85rem;
+}
+    
+/* Right Sidebar */
+.newspaper-sidebar-right {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-left: 1px solid #e0e0e0;
+    font-family: 'Times New Roman', serif;
+    width: 100%;
+}
+    
+.newspaper-related-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #222;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', serif;
+}
+    
+.newspaper-related-articles {
+    margin-top: 10px;
+}
+    
+.newspaper-related-article {
+    padding: 10px 0;
+    border-bottom: 1px dotted #ccc;
+}
+    
+.newspaper-related-article-image {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+    
+.newspaper-related-article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+    
+.newspaper-related-article:hover .newspaper-related-article-image img {
+    transform: scale(1.05);
+}
+    
+.newspaper-related-article-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    color: #222;
+}
+    
+.newspaper-related-article-meta {
+    font-size: 0.8rem;
+    color: #666;
+}
+    
+.newspaper-related-article:hover .newspaper-related-article-title {
+    color: #1a73e8;
+}
+    
+.newspaper-see-more-link {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    text-align: right;
+}
+    
+.newspaper-see-more-link a {
+    color: #1a73e8;
+    font-weight: 600;
+}
+    
+/* Ad space in sidebar */
+.newspaper-ad-section {
+    margin-top: 30px;
+}
+    
+.newspaper-ad-label {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+    
+.newspaper-ad-space {
+    background-color: #f0f0f0;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;
+    color: #888;
+    font-size: 0.9rem;
+}
+    
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .newspaper-grid-container {
+        grid-template-columns: 1fr 240px;
+    }
+}
+    
+@media (max-width: 768px) {
+    .newspaper-grid-container {
+        grid-template-columns: 1fr;
+    }
+      
+    .newspaper-sidebar-right {
+        border: none;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}
+    
+/* Original modern image display styles */
+.modern-image-container {
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 85%;
+    position: relative;
+}
+    
+.modern-featured-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    max-height: 450px;
+}
+    
+.modern-image-container:hover .modern-featured-img {
+    transform: scale(1.02);
+}
+    
+.related-articles-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+    
+.related-article-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    
+.related-article-card a {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    
+.related-article-card .p-4 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+    
+.related-article-card h4 {
+    flex-grow: 1;
+}
+    
+.section-border {
+    height: 3px;
+    width: 60px;
+    background-color: #3b82f6;
+}
+    
+/* Styles for Bottom Articles */
+.newspaper-bottom-articles {
+    margin-top: 2rem;
+}
+    
+.newspaper-bottom-title {
+    margin-bottom: 1.5rem;
+    font-family: 'Times New Roman', serif;
+}
+    
+.newspaper-bottom-title h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+    
+.newspaper-bottom-divider {
+    height: 2px;
+    width: 60px;
+    background-color: #222;
+}
+    
+.newspaper-bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+    
+.newspaper-bottom-card {
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    
+.newspaper-bottom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+    
+.newspaper-bottom-image {
+    height: 150px;
+    overflow: hidden;
+}
+    
+.newspaper-bottom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+.newspaper-placeholder-image {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.newspaper-bottom-content {
+    padding: 12px;
+}
+    
+.newspaper-bottom-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: #222;
+    font-family: 'Times New Roman', serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+    
+.newspaper-bottom-meta {
+    font-size: 0.8rem;
+    color: #666;
+}
+    
+.newspaper-bottom-category {
+    color: #1a73e8;
+    font-weight: 500;
+}
+    
+.newspaper-bottom-separator {
+    margin: 0 4px;
+}
+    
+.newspaper-bottom-date {
+    color: #666;
+}
+    
+.newspaper-bottom-more-link {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+    
+.newspaper-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', serif;
+}
+    
+.newspaper-more-btn:hover {
+    background-color: #444;
+}
+    
+@media (max-width: 1024px) {
+    .newspaper-bottom-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    
+@media (max-width: 768px) {
+    .newspaper-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+      
+    .modern-image-container {
+        max-width: 95%;
+    }
+      
+    .modern-featured-img {
+        max-height: 350px;
+    }
+}
+
+/*--------------------------------------*\
+  COMMENT SECTION STYLES
+\*--------------------------------------*/
+/* Comment Section Header */
+.comment-header {
+    border-bottom: 2px solid #f1f1f1;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+}
+    
+/* Comment Items */
+.comment-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #eaeaea;
+    position: relative;
+    transition: all 0.2s ease;
+}
+    
+.comment-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+    
+.comment-author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+    
+.comment-avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+    
+.comment-meta {
+    margin-left: 0.75rem;
+}
+    
+.comment-author-name {
+    font-weight: 600;
+    font-size: 0.925rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+    
+.comment-date {
+    font-size: 0.75rem;
+    color: #666;
+}
+    
+.comment-content {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0.25rem 0 0.5rem;
+}
+    
+.comment-actions {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+    
+.delete-comment-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    color: #dc2626;
+    background-color: transparent;
+    border: 1px solid #dc2626;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+    
+.delete-comment-btn:hover {
+    background-color: #dc2626;
+    color: white;
+}
+    
+/* Comment Form */
+.comment-form-header {
+    margin-bottom: 0.75rem;
+}
+    
+.comment-form-header h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+    
+.comment-form-description {
+    margin-bottom: 1rem;
+}
+
+.comment-form-description p {
+    color: #555;
+    font-size: 0.925rem;
+    line-height: 1.5;
+}
+    
+.comment-form-section {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+    
+.comment-form {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+    
+.form-user-info {
+    display: none; /* Hide the user info section since we're not using it anymore */
+}
+    
+.user-avatar {
+    display: none; /* Hide the avatar */
+}
+    
+.user-name {
+    display: none; /* Hide the username */
+}
+    
+.form-input-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+    
+.comment-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    resize: vertical;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    min-height: 100px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+    
+.comment-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+    
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+.form-guidelines {
+    color: #666;
+    font-size: 0.75rem;
+}
+    
+.submit-comment-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    background-color: #3b82f6;
+    color: white !important; /* Override previous style */
+    border: none !important; /* Override previous style */
+    border-radius: 0.375rem;
+    font-size: 0.825rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+    
+.submit-comment-btn:hover {
+    background-color: #2563eb;
+}
+    
+/* Login prompt */
+.login-prompt {
+    padding: 1.25rem;
+    margin-top: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    border: 1px solid #eaeaea;
+    text-align: center;
+}
+    
+.login-prompt-content h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+    
+.login-prompt-content p {
+    color: #555;
+    font-size: 0.925rem;
+    margin-bottom: 1rem;
+}
+    
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 0.375rem;
+    font-size: 0.925rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+    
+.login-btn:hover {
+    background-color: #2563eb;
+    text-decoration: none;
+}
+
+/*--------------------------------------*\
+  SHARE BUTTON STYLES
+\*--------------------------------------*/
+/* Standalone Share Button */
+.share-button-standalone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+}
+    
+.share-button-standalone:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(59, 130, 246, 0.3);
+}
+    
+/* Inline Share Button (beside author) */
+.share-button-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+    
+.share-button-inline:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+    
+.share-button-inline .share-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    padding: 0.125rem 0.375rem;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Social Share Icons */
+.social-share-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Slightly reduced spacing for better alignment */
+    margin-left: 0;
+    padding-left: 0; /* Ensure no padding on the left */
+}
+
+.social-share-icon {
+    width: 2rem; /* Adjust size to align with author avatar */
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.social-share-icon svg {
+    width: 1rem; /* Adjusted for better scaling within smaller buttons */
+    height: 1rem;
+    display: block; /* Ensures proper centering */
+}
+
+.social-share-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0.9; /* Slight opacity change on hover */
+}
+
+.social-share-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-share-icon.twitter {
+    background-color: #000000;
+}
+
+.social-share-icon.whatsapp {
+    background-color: #25d366;
+}
+
+.social-share-icon.copy-link {
+    background-color: #3b82f6; /* Blue color for share/copy link button */
+}
+
+/* Share Container Styles */
+.share-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+    margin-left: 0; /* Remove left margin to align with the avatar */
+    padding-left: 0; /* Ensure no padding on the left */
+}
+
+/* 
+.share-button-inline {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    background-color: #f3f4f6;
+    border-radius: 0.375rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.share-button-inline:hover {
+    background-color: #e5e7eb;
+}
+
+.share-count {
+    margin-left: 0.25rem;
+    font-weight: 600;
+}
+*/
+    
+.social-share-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-left: 0; /* Ensure no padding on the left */
+}
+
+.social-share-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------*\
+  ARTICLE ACTIONS & METADATA
+\*--------------------------------------*/
+/* Article Actions Section */
+.article-actions-unified {
+    margin: 2rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+    
+/* Media queries for responsive social share icons */
+@media (max-width: 640px) {
+    .social-share-icons {
+        gap: 0.35rem; /* Even smaller gap on mobile */
+        padding-left: 0; /* Maintain left alignment */
+    }
+    
+    .share-container {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .social-share-icon {
+        width: 1.75rem; /* Smaller on mobile */
+        height: 1.75rem;
+    }
+    
+    .social-share-icon svg {
+        width: 0.875rem;
+        height: 0.875rem;
+    }
+}
+
+/* Article Metadata Styles */
+.article-metadata-unified {
+    margin: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+/* Media queries for responsive design */
+@media (max-width: 640px) {
+    .article-metadata-unified .flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+      
+    .share-button-inline {
+        margin-top: 0.75rem;
+    }
+}
+
+/*--------------------------------------*\
+  PRINT STYLES
+\*--------------------------------------*/
+@media print {
+    header, 
+    footer, 
+    button {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        font-size: 12pt;
+    }
+}
+
+/*--------------------------------------*\
+  CATEGORY BADGE STYLES
+\*--------------------------------------*/
+/* Category Badge - Improved and smaller */
+.category-badge-prominent {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.6rem; /* Reduced padding for a smaller look */
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 0.75rem; /* More rounded corners */
+    font-size: 0.7rem; /* Smaller font size */
+    font-weight: 500; /* Slightly reduced font weight */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem; /* Add space below the badge */
+}
+
+.category-badge-prominent svg {
+    width: 0.75rem; /* Smaller icon */
+    height: 0.75rem;
+    margin-right: 0.25rem; /* Reduced spacing */
+}
+
+.category-badge-prominent:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/*--------------------------------------*\
+  HIDE SHARE BUTTON ELEMENTS
+\*--------------------------------------*/
+.engagement-btn.share-btn,
+.shares-count,
+#shareBtnCount {
+    display: none !important;
+}
