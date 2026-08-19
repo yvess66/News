@@ -14,6 +14,10 @@ $runtimeDefaults = [
     'FILESYSTEM_DISK' => 'local',
     'MAIL_MAILER' => 'log',
     'BROADCAST_CONNECTION' => 'log',
+    'AUTH_GUARD' => 'web',
+    'APP_MAINTENANCE_DRIVER' => 'file',
+    'APP_MAINTENANCE_STORE' => 'database',
+    'QUEUE_FAILED_DRIVER' => 'database-uuids',
 ];
 
 foreach ($runtimeDefaults as $key => $value) {
