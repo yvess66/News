@@ -7,6 +7,22 @@ putenv('APP_STORAGE=/tmp/storage');
 $_ENV['LOG_CHANNEL'] = 'stderr';
 putenv('LOG_CHANNEL=stderr');
 
+$runtimeDefaults = [
+    'CACHE_STORE' => 'database',
+    'SESSION_DRIVER' => 'database',
+    'QUEUE_CONNECTION' => 'database',
+    'FILESYSTEM_DISK' => 'local',
+    'MAIL_MAILER' => 'log',
+    'BROADCAST_CONNECTION' => 'log',
+];
+
+foreach ($runtimeDefaults as $key => $value) {
+    if (getenv($key) === false || getenv($key) === '') {
+        $_ENV[$key] = $value;
+        putenv($key.'='.$value);
+    }
+}
+
 $_ENV['APP_BOOTSTRAP'] = '/tmp/bootstrap';
 putenv('APP_BOOTSTRAP=/tmp/bootstrap');
 
